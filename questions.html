@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BigTech Prep — Questions</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body data-page="questions">
+
+  <nav id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-title">🚀 BigTech Prep</div>
+      <div class="brand-sub">Suraj Singh · TCS → Google/Amazon</div>
+    </div>
+    <div class="sidebar-nav">
+      <a href="index.html"      class="nav-link"><span class="nav-icon">📊</span> Dashboard</a>
+      <a href="questions.html"  class="nav-link active"><span class="nav-icon">🧩</span> Questions</a>
+      <a href="study-plan.html" class="nav-link"><span class="nav-icon">📅</span> Study Plan</a>
+      <a href="resources.html"  class="nav-link"><span class="nav-icon">📚</span> Resources</a>
+    </div>
+    <div class="sidebar-footer">
+      <button id="theme-toggle" title="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="topbar">
+      <button id="hamburger" aria-label="Open menu">☰</button>
+      <span class="topbar-title">🧩 Questions</span>
+      <button id="theme-toggle" style="background:none;border:none;font-size:1.2rem;cursor:pointer">☀️</button>
+    </div>
+
+    <div class="page">
+      <h1 class="page-title">🧩 Question Tracker</h1>
+      <p class="page-subtitle">Blind 75 + Extra problems · Tick each question to update your progress instantly</p>
+
+      <!-- Filter bar -->
+      <div class="filter-bar">
+        <select id="filter-topic"      aria-label="Filter by topic"></select>
+        <select id="filter-difficulty" aria-label="Filter by difficulty"></select>
+        <select id="filter-status"     aria-label="Filter by status"></select>
+        <input  id="search-box" type="search" placeholder="🔍  Search by name, topic, LC #…" aria-label="Search questions"/>
+        <div class="filter-actions">
+          <button class="btn-sm" id="btn-expand-all">Expand All</button>
+          <button class="btn-sm" id="btn-collapse-all">Collapse All</button>
+        </div>
+      </div>
+
+      <div id="question-count" style="margin-bottom:12px;font-size:.8rem;color:var(--text-muted)"></div>
+
+      <!-- Questions (grouped by topic) -->
+      <div id="questions-container"></div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
